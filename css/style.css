@@ -64,11 +64,28 @@ ul { list-style: none; }
 }
 
 .logo {
-  font-weight: 700;
-  font-size: 1.2rem;
-  letter-spacing: -0.02em;
+  display: inline-flex;
+  align-items: center;
 }
-.logo span { color: var(--accent-2); }
+.logo-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 11px;
+  background: linear-gradient(135deg, var(--accent), var(--accent-2));
+  color: #08090f;
+  font-weight: 800;
+  font-size: 0.92rem;
+  letter-spacing: -0.02em;
+  box-shadow: 0 6px 18px -6px #6366f190;
+  transition: transform .3s ease, box-shadow .3s ease;
+}
+.logo:hover .logo-badge {
+  transform: rotate(-6deg) scale(1.06);
+  box-shadow: 0 8px 22px -6px #22d3ee80;
+}
 
 .nav-links {
   display: flex;
